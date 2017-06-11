@@ -10,6 +10,12 @@ import { users } from '../config/data';
 class Feed extends Component {
   onLearnMore = (user) => {
     this.props.navigation.navigate('Details', { ...user });
+    // this.props.navigation.dispatch({
+    //   type: 'ReplaceCurrentScreen',
+    //   routeName: 'Details',
+    //   params: { ...user },
+    //   key: 'Details'
+    // });
   };
 
   render() {

@@ -22,6 +22,23 @@ export const FeedStack = StackNavigator({
   },
 });
 
+// const prevGetStateForAction = FeedStack.router.getStateForAction;
+// FeedStack.router = {
+//   ...FeedStack.router,
+//   getStateForAction(action, state) {
+//     if(state && action.type === 'ReplaceCurrentScreen') {
+//       const routes = state.routes.splice(0, state.routes.length - 1);
+//       routes.push(action);
+//       return {
+//         ...state,
+//         routes,
+//         index: routes.length - 1,
+//       };
+//     }
+//     return prevGetStateForAction(action, state);
+//   }
+// }
+
 export const Tabs = TabNavigator({
   Feed: {
     screen: FeedStack,
